@@ -119,3 +119,105 @@ $(".portfolio-filter-btn").on("click", function () {
         }
     });
 });
+
+
+
+// Smooth scroll for menu links
+$('.navbar a, .mobile-menus a').on('click', function (e) {
+    var target = $(this).attr('href');
+
+    if (target && target.startsWith('#') && $(target).length) {
+        e.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $(target).offset().top - 100
+        }, 700);
+
+        closeMenu();
+    }
+});
+
+// portfolio gallery lightbox
+(function () {
+    var $lightbox = $("#galleryLightbox");
+    var $img = $("#galleryLightboxImg");
+    var $title = $("#galleryLightboxTitle");
+    var $counter = $("#galleryLightboxCounter");
+    var gallery = [];
+    var currentIndex = 0;
+
+    // builds the gallery for ONE card only: uses data-gallery (JSON array of
+    // image paths) when present on the card, otherwise falls back to just
+    // that card's own thumbnail image.
+    function buildGalleryForCard($card) {
+        var title = $card.find(".portfolio-card-title").text().trim();
+        var raw = $card.attr("data-gallery");
+        var images = [];
+
+        if (raw) {
+            try {
+                images = JSON.parse(raw);
+            } catch (err) {
+                images = [];
+            }
+        }
+
+        if (!images.length) {
+            var thumbSrc = $card.find(".portfolio-card-thumb img").attr("src");
+            if (thumbSrc) images = [thumbSrc];
+        }
+
+        return images.map(function (src) {
+            return { src: src, title: title };
+        });
+    }
+
+    function showSlide(index) {
+        if (!gallery.length) return;
+        currentIndex = (index + gallery.length) % gallery.length;
+        var item = gallery[currentIndex];
+        $img.attr("src", item.src).attr("alt", item.title);
+        $title.text(item.title);
+        $counter.text(gallery.length > 1 ? (currentIndex + 1) + " / " + gallery.length : "");
+        $lightbox.toggleClass("has-multiple", gallery.length > 1);
+    }
+
+    function openLightbox($card, startIndex) {
+        gallery = buildGalleryForCard($card);
+        if (!gallery.length) return;
+        showSlide(startIndex || 0);
+        $lightbox.addClass("is-active");
+        $("body").css("overflow", "hidden");
+    }
+
+    function closeLightbox() {
+        $lightbox.removeClass("is-active");
+        $("body").css("overflow", "");
+    }
+
+    // open gallery when a portfolio thumbnail (or its link) is clicked —
+    // only that card's own images are shown
+    $(document).on("click", ".portfolio-card-thumb img, .portfolio-card-thumb .portfolio-card-link", function (e) {
+        e.preventDefault();
+        var $card = $(this).closest(".portfolio-card");
+        openLightbox($card, 0);
+    });
+
+    $(document).on("click", ".gallery-lightbox-close, .gallery-lightbox-backdrop", closeLightbox);
+    $(document).on("click", ".gallery-lightbox-next", function () { showSlide(currentIndex + 1); });
+    $(document).on("click", ".gallery-lightbox-prev", function () { showSlide(currentIndex - 1); });
+
+    $(document).on("keydown", function (e) {
+        if (!$lightbox.hasClass("is-active")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowRight") showSlide(currentIndex + 1);
+        if (e.key === "ArrowLeft") showSlide(currentIndex - 1);
+    });
+})();
+
+$(".resumeBtn").click(function () {
+    const link = document.createElement("a");
+    link.href = "assets/Krutika-Resume.pdf";
+    link.download = "Krutika-Patel-Resume.pdf";
+    link.click();
+});

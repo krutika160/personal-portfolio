@@ -52,13 +52,17 @@
                         <a href="#about">
                             About
                         </a>
+
+                        <a href="#service">
+                            Services
+                        </a>
             
-                        <a href="#projects">
+                        <a href="#portfolio">
                             Projects
                         </a>
             
-                        <a href="#contacts">
-                            Contacts
+                        <a href="#contact">
+                            Contact
                         </a>
             
                     </nav>
@@ -90,7 +94,9 @@
                         <p class="hero-subtitle">I create modern, responsive websites from first concept to polished digital experience.</p>
                         <div class="btn-actions">
                             <a href="#" class="btn-primary">Got a project?</a>
-                            <a href="#" class="btn-primary btn-outline">My resume</a>
+                            <a href="assets/Krutika-Patel-Resume.pdf" id="" class="btn-primary btn-outline resume-btn resumeBtn" download="Krutika-Patel-Resume.pdf">
+                                My resume
+                            </a>
                         </div>
                     </div>
                     <div class="hero-visual">
@@ -184,8 +190,11 @@
                                 </div>
                             </div>
                             <div class="btn-actions">
-                                <a href="#" class="btn-primary btn-outline">Contact Me</a>
-                                <a href="#" class="btn-primary">Download CV</a>
+                                <a href="tel:8128979104" class="btn-primary btn-outline">Contact Me</a>
+                                
+                                <a href="assets/Krutika-Patel-Resume.pdf" class="btn-primary  resume-btn resumeBtn" download="Krutika-Patel-Resume.pdf">
+                                    Download CV
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -193,7 +202,7 @@
                 <div class="about-stats">
                     <div class="about-stat">
                         <span class="about-stat-icon"><i class="fas fa-briefcase"></i></span>
-                        <span class="about-stat-number">1.5+</span>
+                        <span class="about-stat-number">2.5+</span>
                         <span class="about-stat-rule"></span>
                         <span class="about-stat-label">Years Experience</span>
                     </div>
@@ -211,7 +220,7 @@
                     </div>
                     <div class="about-stat">
                         <span class="about-stat-icon"><i class="fas fa-pencil-ruler"></i></span>
-                        <span class="about-stat-number">10+</span>
+                        <span class="about-stat-number">5+</span>
                         <span class="about-stat-rule"></span>
                         <span class="about-stat-label">UI/UX Design</span>
                     </div>
@@ -305,110 +314,119 @@
                         <button class="portfolio-filter-btn" data-filter="wordpress">WordPress</button>
                     </div>
                     <div class="portfolio-grid">
-                        <div class="portfolio-card" data-category="web-design">
+                        <div class="portfolio-card" data-category="web-design" data-gallery='["images/motion-1.png","images/motion-2.png","images/motion-3.png","images/motion-4.png"]'>
                             <div class="portfolio-card-thumb">
-                                <span class="portfolio-card-icon"><i class="fas fa-laptop-code"></i></span>
+                                <img src="images/p3.png" alt="">
+                                <div class="portfolio-card-overlay">
+                                    <a href="https://motionversellp.com/" class="portfolio-card-link" aria-label="View project"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="portfolio-card-tag">Responsive Design</span>
+                                <h3 class="portfolio-card-title">Motion Verse</h3>
+                                <p class="portfolio-card-text">A modern marketing website showcasing creative content, digital strategies, and marketing services with a clean and engaging design.</p>
+                                <div class="portfolio-card-stack">
+                                    <span>HTML5</span>
+                                    <span>CSS</span>
+                                    <span>Bootstrap</span>
+                                    <span>jQuery</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-card" data-category="web-design" data-gallery='["images/p2.png"'>
+                            <div class="portfolio-card-thumb">
+                                <img src="images/p2.png" alt="">
+                                <div class="portfolio-card-overlay">
+                                    <a href="tested-verb.localsite.io" class="portfolio-card-link" aria-label="View project"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="portfolio-card-tag">Web Design</span>
+                                <h3 class="portfolio-card-title">Find Your Perfect Home</h3>
+                                <p class="portfolio-card-text">
+                                    Discover premium homes built for modern living, comfort, and lasting value. Find your perfect space with a responsive design using HTML, CSS, jQuery, and Bootstrap.
+                                </p>
+                                <div class="portfolio-card-stack">
+                                    <span>HTML5</span>
+                                    <span>CSS</span>
+                                    <span>Bootstrap</span>
+                                    <span>jQuery</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-card" data-category="wordpress" data-gallery='["images/wordpress-1.png","images/wordpress-2.png","images/wordpress-3.png","images/wordpress-4.png","images/wordpress-5.png"]'>
+                            <div class="portfolio-card-thumb">
+                                <img src="images/p1.png" alt="">
+                                
+                                <div class="portfolio-card-overlay">
+                                    
+                                    <a href="#" class="portfolio-card-link" aria-label="View project"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="portfolio-card-tag">Wordpress</span>
+                                <h3 class="portfolio-card-title">Real Pearl International</h3>
+                                <p class="portfolio-card-text">Designed and developed a premium pearl eCommerce website using WordPress, Elementor.</p>
+                                <div class="portfolio-card-stack">
+                                    <span>WordPress</span>
+                                    <span>Elementor</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-card" data-category="web-design" data-gallery='["images/s-1.png","images/s-2.png","images/s-3.png","images/s-4.png","images/s-5.png"]'>
+                            <div class="portfolio-card-thumb">
+                                <img src="images/p4.png" alt="">
                                 <div class="portfolio-card-overlay">
                                     <a href="#" class="portfolio-card-link" aria-label="View project"><i class="fas fa-external-link-alt"></i></a>
                                 </div>
                             </div>
                             <div class="portfolio-card-content">
                                 <span class="portfolio-card-tag">Web Design</span>
-                                <h3 class="portfolio-card-title">Corporate Business Website</h3>
-                                <p class="portfolio-card-text">A clean, responsive multi-page website built with HTML5, CSS3 and jQuery for a growing business.</p>
+                                <h3 class="portfolio-card-title">Digital Marketing & Web Solutions</h3>
+                                <p class="portfolio-card-text">A modern, responsive business website designed to showcase web design, digital marketing, branding, and creative services with a clean and professional user experience.</p>
                                 <div class="portfolio-card-stack">
                                     <span>HTML5</span>
-                                    <span>CSS3</span>
-                                    <span>jQuery</span>
+                                    <span>CSS</span>
+                                    <span>Bootstrap</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="portfolio-card" data-category="ui-ux">
+                        <div class="portfolio-card" data-category="ui-ux" data-gallery='["images/habit-tacker-1.png","images/habit-tacker-2.png"]'>
                             <div class="portfolio-card-thumb">
-                                <span class="portfolio-card-icon"><i class="fas fa-pencil-ruler"></i></span>
+                                <img src="images/ht.png" alt="">
                                 <div class="portfolio-card-overlay">
                                     <a href="#" class="portfolio-card-link" aria-label="View project"><i class="fas fa-external-link-alt"></i></a>
                                 </div>
                             </div>
                             <div class="portfolio-card-content">
                                 <span class="portfolio-card-tag">UI/UX Design</span>
-                                <h3 class="portfolio-card-title">Mobile App Redesign</h3>
-                                <p class="portfolio-card-text">User-first interface and interaction design created in Figma, focused on clarity and ease of use.</p>
-                                <div class="portfolio-card-stack">
-                                    <span>Figma</span>
-                                    <span>Prototyping</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-card" data-category="wordpress">
-                            <div class="portfolio-card-thumb">
-                                <span class="portfolio-card-icon"><i class="fab fa-wordpress"></i></span>
-                                <div class="portfolio-card-overlay">
-                                    <a href="#" class="portfolio-card-link" aria-label="View project"><i class="fas fa-external-link-alt"></i></a>
-                                </div>
-                            </div>
-                            <div class="portfolio-card-content">
-                                <span class="portfolio-card-tag">WordPress</span>
-                                <h3 class="portfolio-card-title">Portfolio &amp; Blog Site</h3>
-                                <p class="portfolio-card-text">A custom WordPress theme setup with an easy-to-manage layout for posts and portfolio items.</p>
-                                <div class="portfolio-card-stack">
-                                    <span>WordPress</span>
-                                    <span>CSS3</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-card" data-category="web-design">
-                            <div class="portfolio-card-thumb">
-                                <span class="portfolio-card-icon"><i class="fas fa-mobile-alt"></i></span>
-                                <div class="portfolio-card-overlay">
-                                    <a href="#" class="portfolio-card-link" aria-label="View project"><i class="fas fa-external-link-alt"></i></a>
-                                </div>
-                            </div>
-                            <div class="portfolio-card-content">
-                                <span class="portfolio-card-tag">Responsive Design</span>
-                                <h3 class="portfolio-card-title">E-commerce Landing Page</h3>
-                                <p class="portfolio-card-text">A fully responsive landing page optimised for conversions across desktop, tablet and mobile.</p>
-                                <div class="portfolio-card-stack">
-                                    <span>HTML5</span>
-                                    <span>Tailwind CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-card" data-category="ui-ux">
-                            <div class="portfolio-card-thumb">
-                                <span class="portfolio-card-icon"><i class="fas fa-object-group"></i></span>
-                                <div class="portfolio-card-overlay">
-                                    <a href="#" class="portfolio-card-link" aria-label="View project"><i class="fas fa-external-link-alt"></i></a>
-                                </div>
-                            </div>
-                            <div class="portfolio-card-content">
-                                <span class="portfolio-card-tag">UI/UX Design</span>
-                                <h3 class="portfolio-card-title">SaaS Dashboard Concept</h3>
-                                <p class="portfolio-card-text">Wireframes and high-fidelity mockups for a data dashboard, designed with a clear visual hierarchy.</p>
+                                <h3 class="portfolio-card-title">Habit Tracker</h3>
+                                <p class="portfolio-card-text">A mobile app designed in Figma to help users build habits through daily tracking, points, badges, and leaderboards.</p>
                                 <div class="portfolio-card-stack">
                                     <span>Figma</span>
                                     <span>UI Kit</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="portfolio-card" data-category="web-design">
+                        <div class="portfolio-card" data-category="ui-ux" data-gallery='["images/petcare-1.png","images/petcare-2.png"]'>
                             <div class="portfolio-card-thumb">
-                                <span class="portfolio-card-icon"><i class="fas fa-code"></i></span>
+                                <img src="images/petcare.png" alt="">
                                 <div class="portfolio-card-overlay">
                                     <a href="#" class="portfolio-card-link" aria-label="View project"><i class="fas fa-external-link-alt"></i></a>
                                 </div>
                             </div>
                             <div class="portfolio-card-content">
-                                <span class="portfolio-card-tag">Web Development</span>
-                                <h3 class="portfolio-card-title">Personal Portfolio Site</h3>
-                                <p class="portfolio-card-text">A hand-coded portfolio built from a Figma design using HTML5, SCSS and vanilla JavaScript.</p>
+                                <span class="portfolio-card-tag">UI/UX Design</span>
+                                <h3 class="portfolio-card-title">Pet Care</h3>
+                                <p class="portfolio-card-text">A complete mobile app concept designed in Figma for pet owners, combining pet management, health tracking, appointments, and helpful pet-care features in a simple interface.</p>
                                 <div class="portfolio-card-stack">
-                                    <span>HTML5</span>
-                                    <span>SCSS</span>
-                                    <span>JavaScript</span>
+                                    <span>Figma</span>
+                                    <span>UI Kit</span>
                                 </div>
                             </div>
                         </div>
+                        
+                        
                     </div>
                 </div>
                 
@@ -491,7 +509,7 @@
                     <p class="experience-subtitle">Together, we create secure solutions that protect what matters. Let’s build a safer, brighter future together.</p>
                 </div>
                 <div class="row contact-details">
-                    <div class="col s12 m12 l12 xl5">
+                    <div class="col s12 m12 l12 xl12">
                         <div class="contact-box">
                             <div class="contact-title">
                                 <h2>Krutika patel</h2>
@@ -517,7 +535,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m12 l12 xl7">
+                    <div class="col s12 m12 l12 xl7 contact-form-main">
                         <div class="contact-form">
                             <form action="">
                                 <div class="row">
@@ -571,38 +589,56 @@
             </div>
         </div>
         <!-- footer section -->
-         <div class="footer-main">
-        <div class="container">
-            <div class="footer-logo">
-                <span class="footer1"></span>
-                <a href="#home">
-                    <img src="images/kp-logo.png" alt="">
-                </a>
-                <span class="footer2"></span>
-            </div>
-            <div class="row ">
-                <div class="col s12 m6">
-                    <div class="footer-left">
-                        <span>© 2026 krutika patel</span>
-                    </div>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-logo">
+                    <span class="footer1"></span>
+                    <a href="#home">
+                        <img src="images/kp-logo.png" alt="">
+                    </a>
+                    <span class="footer2"></span>
                 </div>
-                <div class="col s12 m6">
-                    <ul class="footer-social">
-                        <li>
-                            <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
-                        </li>
-                        <li>
-                            <a href="#"> <i class="fab fa-instagram"></i> </a>
-                        </li>
-                        <li>
-                            <a href="#"> <i class="fab fa-facebook-f"></i> </a>
-                        </li>
-                    </ul>
+                <div class="row ">
+                    <div class="col s12 m6">
+                        <div class="footer-left">
+                            <span>© 2026 krutika patel</span>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <ul class="footer-social">
+                            <li>
+                                <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fab fa-instagram"></i> </a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    
     </main>
+
+    <!-- Portfolio Gallery Lightbox -->
+    <div class="gallery-lightbox" id="galleryLightbox">
+        <div class="gallery-lightbox-backdrop"></div>
+        <div class="gallery-lightbox-inner">
+            <button type="button" class="gallery-lightbox-close" aria-label="Close gallery"><i class="fas fa-times"></i></button>
+            <button type="button" class="gallery-lightbox-nav gallery-lightbox-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+            <div class="gallery-lightbox-stage">
+                <img src="" alt="" class="gallery-lightbox-img" id="galleryLightboxImg">
+                <div class="gallery-lightbox-caption">
+                    <h3 id="galleryLightboxTitle"></h3>
+                    <span id="galleryLightboxCounter"></span>
+                </div>
+            </div>
+            <button type="button" class="gallery-lightbox-nav gallery-lightbox-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
