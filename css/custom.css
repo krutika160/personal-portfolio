@@ -1228,6 +1228,9 @@ main {
   text-align: center;
   width: 70%;
 }
+.portfolio .section-heading .section-title {
+  text-align: center;
+}
 .portfolio .portfolio-filter {
   display: flex;
   justify-content: center;
