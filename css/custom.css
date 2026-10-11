@@ -1282,7 +1282,7 @@ main {
 .portfolio .portfolio-grid .portfolio-card:hover .portfolio-card-thumb .portfolio-card-overlay {
   opacity: 1;
 }
-.portfolio .portfolio-grid .portfolio-card:hover .portfolio-card-thumb .portfolio-card-overlay .portfolio-card-link {
+.portfolio .portfolio-grid .portfolio-card:hover .portfolio-card-thumb .portfolio-card-overlay .portfolio-card-link, .portfolio .portfolio-grid .portfolio-card:hover .portfolio-card-thumb .portfolio-card-overlay .inner-link {
   transform: scale(1);
 }
 .portfolio .portfolio-grid .portfolio-card:hover .portfolio-card-thumb .portfolio-card-icon {
@@ -1318,7 +1318,7 @@ main {
   opacity: 0;
   transition: all 0.4s ease;
 }
-.portfolio .portfolio-grid .portfolio-card .portfolio-card-thumb .portfolio-card-overlay .portfolio-card-link {
+.portfolio .portfolio-grid .portfolio-card .portfolio-card-thumb .portfolio-card-overlay .portfolio-card-link, .portfolio .portfolio-grid .portfolio-card .portfolio-card-thumb .portfolio-card-overlay .inner-link {
   display: flex;
   align-items: center;
   justify-content: center;

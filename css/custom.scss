@@ -1340,7 +1340,7 @@ main{
                     .portfolio-card-overlay {
                         opacity: 1;
 
-                        .portfolio-card-link {
+                        .portfolio-card-link, .inner-link {
                             transform: scale(1);
                         }
                     }
@@ -1385,7 +1385,7 @@ main{
                     opacity: 0;
                     transition: all 0.4s ease;
 
-                    .portfolio-card-link {
+                    .portfolio-card-link, .inner-link {
                         display: flex;
                         align-items: center;
                         justify-content: center;
