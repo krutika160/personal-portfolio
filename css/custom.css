@@ -334,7 +334,7 @@ main {
   display: inline-block;
 }
 .hero .hero-inner .hero-content .hero-title {
-  font-size: 52px;
+  font-size: 48px;
   line-height: 1.1;
   font-weight: 700;
   margin: 0 0 20px;
@@ -1274,6 +1274,9 @@ main {
 .portfolio .portfolio-grid .portfolio-card.is-hidden {
   display: none;
 }
+.portfolio .portfolio-grid .portfolio-card.is-more-hidden {
+  display: none;
+}
 .portfolio .portfolio-grid .portfolio-card:hover {
   transform: translateY(-6px);
   border-color: var(--primary-color);
@@ -1293,8 +1296,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 200px;
-  background: linear-gradient(135deg, rgba(108, 77, 255, 0.18) 0%, rgba(167, 139, 250, 0.08) 100%);
+  height: auto;
+  min-height: 200px;
   overflow: hidden;
 }
 .portfolio .portfolio-grid .portfolio-card .portfolio-card-thumb img {
@@ -1374,7 +1377,68 @@ main {
   border: 1px solid var(--border-color);
   color: var(--secondary-text-color);
 }
+.portfolio .portfolio-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.portfolio .portfolio-more .portfolio-more-btn {
+  cursor: pointer;
+  border: 0;
+}
+.portfolio .portfolio-more .is-hidden {
+  display: none;
+}
 
+.an.an-in {
+  opacity: 1;
+  animation: anUp 0.8s cubic-bezier(0.22, 0.8, 0.3, 1) backwards;
+  animation-delay: var(--an-d, 0s);
+}
+
+.scroll-top-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--main-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px var(--third-color);
+  z-index: 9990;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: 0.3s ease;
+}
+.scroll-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-top-btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-4px);
+}
+.scroll-top-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 575px) {
+  .scroll-top-btn {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+  }
+}
 .gallery-lightbox {
   position: fixed;
   inset: 0;

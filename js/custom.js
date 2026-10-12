@@ -221,3 +221,81 @@ $(".resumeBtn").click(function () {
     link.download = "Krutika-Patel-Resume.pdf";
     link.click();
 });
+
+// portfolio "View More" - 6 projects by default, click to show all
+$(function () {
+    var LIMIT = 6;
+    var expanded = false;
+    var $grid = $(".portfolio-grid");
+    if (!$grid.length) return;
+
+    // use the button from the HTML if it exists, otherwise create it here
+    var $btn = $("#portfolioMoreBtn");
+    if (!$btn.length) {
+        $btn = $('<button type="button" class="btn-primary portfolio-more-btn" id="portfolioMoreBtn">View More</button>');
+        $('<div class="portfolio-more"></div>').insertAfter($grid).append($btn);
+    }
+    var $wrap = $btn.parent();
+    $wrap.css({ display: "flex", justifyContent: "center", marginTop: "40px" });
+    $btn.css({ cursor: "pointer", border: "0" });
+
+    function updatePortfolio() {
+        var filter = $(".portfolio-filter-btn.active").data("filter") || "all";
+        var shown = 0;
+
+        $(".portfolio-card").each(function () {
+            var $card = $(this);
+            var matches = filter === "all" || $card.data("category") === filter;
+            $card.toggleClass("is-hidden", !matches);
+
+            if (!matches) {
+                $card.css("display", "");
+                return;
+            }
+            shown++;
+            // hide cards after the 6th, using inline style
+            $card.css("display", (!expanded && shown > LIMIT) ? "none" : "");
+        });
+
+        // hide the button when a tab has 6 or fewer projects
+        $wrap.css("display", shown <= LIMIT ? "none" : "flex");
+        $btn.text(expanded ? "View Less" : "View More");
+    }
+
+    $btn.on("click", function () {
+        expanded = !expanded;
+        updatePortfolio();
+        if (!expanded) {
+            $("html, body").animate({ scrollTop: $("#portfolio").offset().top - 100 }, 500);
+        }
+    });
+
+    // choosing a tab starts again with 6 projects
+    $(".portfolio-filter-btn").on("click", function () {
+        expanded = false;
+        updatePortfolio();
+    });
+
+    updatePortfolio();
+});
+
+// scroll to top
+$(function () {
+    const $top = $(`
+        <button type="button" class="scroll-top-btn" aria-label="Scroll to top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"/>
+            </svg>
+        </button>
+    `).appendTo("body");
+
+    $(window).on("scroll", function () {
+        $top.toggleClass("show", $(window).scrollTop() > 300);
+    });
+
+    $top.on("click", function () {
+        $("html, body").animate({ scrollTop: 0 }, 700);
+    });
+});
+

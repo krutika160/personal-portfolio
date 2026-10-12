@@ -1,0 +1,101 @@
+/* ===== Portfolio animations (added) ===== */
+
+/* --- Scroll progress bar --- */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; height: 3px; width: 100%;
+  background: linear-gradient(90deg, #6C4DFF, #A78BFA);
+  transform: scaleX(0); transform-origin: left;
+  z-index: 10000; pointer-events: none;
+}
+
+/* --- Page loader --- */
+.page-loader {
+  position: fixed; inset: 0; z-index: 10001;
+  background: #080B18; display: flex; align-items: center; justify-content: center;
+  transition: opacity .6s ease, visibility .6s ease;
+}
+.page-loader.done { opacity: 0; visibility: hidden; }
+.page-loader span {
+  width: 54px; height: 54px; border-radius: 50%;
+  border: 3px solid #252B45; border-top-color: #6C4DFF;
+  animation: anSpin .9s linear infinite;
+}
+@keyframes anSpin { to { transform: rotate(360deg); } }
+
+/* --- Scroll reveal (uses opacity + individual `translate`/`scale`
+       props so it never clashes with existing hover transforms) --- */
+.an { opacity: 0; }
+.an.an-in { opacity: 1; animation: anUp .8s cubic-bezier(.22,.8,.3,1) backwards; animation-delay: var(--an-d, 0s); }
+.an-left.an-in  { animation-name: anLeft; }
+.an-right.an-in { animation-name: anRight; }
+.an-zoom.an-in  { animation-name: anZoom; }
+@keyframes anUp    { from { opacity: 0; translate: 0 40px; } to { opacity: 1; translate: 0 0; } }
+@keyframes anLeft  { from { opacity: 0; translate: -60px 0; } to { opacity: 1; translate: 0 0; } }
+@keyframes anRight { from { opacity: 0; translate: 60px 0; }  to { opacity: 1; translate: 0 0; } }
+@keyframes anZoom  { from { opacity: 0; scale: .85; }         to { opacity: 1; scale: 1; } }
+
+/* --- Section title underline draws in --- */
+.section-title-rule { transform-origin: left; }
+.an-line { opacity: 1; scale: 0 1; transition: scale .8s .3s ease; }
+.an-line.an-in { scale: 1 1; }
+
+/* --- Hero extras --- */
+.hero .hero-visual .hero-photo { animation: anFloat 5s ease-in-out infinite; }
+.hero .hero-visual .hero-ring-outer { animation: anPulse 4s ease-in-out infinite; }
+@keyframes anFloat { 0%,100% { translate: 0 0; } 50% { translate: 0 -14px; } }
+@keyframes anPulse { 0%,100% { scale: 1; opacity: 1; } 50% { scale: 1.05; opacity: .7; } }
+.hero .hero-title { background-size: 200% auto; }
+.hero .hero-greeting .dot { display: inline-block; animation: anBlink 1.2s steps(2) infinite; }
+@keyframes anBlink { 50% { opacity: 0; } }
+.hero .hero-visual .hero-arrow-left  { animation: anNudgeL 1.6s ease-in-out infinite; }
+.hero .hero-visual .hero-arrow-right { animation: anNudgeR 1.6s ease-in-out infinite; }
+@keyframes anNudgeL { 50% { translate: -6px 0; } }
+@keyframes anNudgeR { 50% { translate: 6px 0; } }
+
+/* typing cursor */
+.typing-cursor::after { content: "|"; margin-left: 2px; color: #A78BFA; animation: anBlink .8s steps(2) infinite; }
+
+/* --- About photo decor --- */
+.about-ring { animation: anSpin 30s linear infinite; }
+.about-dots { animation: anFloat 6s ease-in-out infinite; }
+.about-dots-bottom { animation-delay: -3s; }
+
+/* --- Service icons wiggle on card hover --- */
+.service-card:hover .service-card-icon { animation: anWiggle .6s ease; }
+@keyframes anWiggle { 0%,100% { rotate: 0; } 25% { rotate: -12deg; } 75% { rotate: 12deg; } }
+
+/* --- Buttons: shine sweep --- */
+.btn-primary { position: relative; overflow: hidden; }
+.btn-primary::after {
+  content: ""; position: absolute; top: 0; left: -75%; width: 50%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,.35), transparent);
+  transform: skewX(-20deg); pointer-events: none;
+}
+.btn-primary:hover::after { animation: anShine .8s ease; }
+@keyframes anShine { to { left: 130%; } }
+
+/* --- Portfolio cards: thumbnail zoom + filter pop --- */
+.portfolio-card-thumb { overflow: hidden; }
+.portfolio-card-thumb img { transition: transform .6s ease; }
+.portfolio-card:hover .portfolio-card-thumb img { transform: scale(1.08); }
+.portfolio-card.an-pop { animation: anPop .5s ease backwards !important; }
+@keyframes anPop { from { opacity: 0; scale: .92; } to { opacity: 1; scale: 1; } }
+
+/* --- Experience timeline icons pulse --- */
+.experience-icon { animation: anRing 2.6s ease-out infinite; }
+@keyframes anRing {
+  0%   { box-shadow: 0 0 0 0 rgba(108,77,255,.5); }
+  70%  { box-shadow: 0 0 0 14px rgba(108,77,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(108,77,255,0); }
+}
+
+/* --- Footer social icons --- */
+.footer-social a { transition: transform .3s ease; display: inline-block; }
+.footer-social a:hover { transform: translateY(-5px) rotate(8deg); }
+
+/* --- Respect reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .an, .an-line { opacity: 1 !important; scale: 1 !important; }
+  .page-loader { display: none; }
+}

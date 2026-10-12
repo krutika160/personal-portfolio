@@ -12,6 +12,7 @@
     <link type="text/css" rel="stylesheet" href="css/external.css" />
     <link type="text/css" rel="stylesheet" href="css/fonts.css" />
     <link type="text/css" rel="stylesheet" href="css/custom.css" />
+    <link type="text/css" rel="stylesheet" href="css/animations.css" />
 </head>
 <body>
     <!-- header -->
@@ -93,7 +94,7 @@
                     
                         <p class="hero-subtitle">I create modern, responsive websites from first concept to polished digital experience.</p>
                         <div class="btn-actions">
-                            <a href="#" class="btn-primary">Got a project?</a>
+                            <a href="https://wa.me/918128979104" target="_blank" rel="noopener noreferrer" class="btn-primary-custom btn-primary">Got a project?</a>
                             <a href="assets/Krutika-Patel-Resume.pdf" id="" class="btn-primary btn-outline resume-btn resumeBtn" download="Krutika-Patel-Resume.pdf">
                                 My resume
                             </a>
@@ -190,7 +191,7 @@
                                 </div>
                             </div>
                             <div class="btn-actions">
-                                <a href="tel:8128979104" class="btn-primary btn-outline">Contact Me</a>
+                                <a href="https://wa.me/918128979104" target="_blank" rel="noopener noreferrer" class="btn-primary-custom btn-primary btn-outline">Contact Me</a>
                                 
                                 <a href="assets/Krutika-Patel-Resume.pdf" class="btn-primary  resume-btn resumeBtn" download="Krutika-Patel-Resume.pdf">
                                     Download CV
@@ -208,7 +209,7 @@
                     </div>
                     <div class="about-stat">
                         <span class="about-stat-icon"><i class="fas fa-folder"></i></span>
-                        <span class="about-stat-number">10+</span>
+                        <span class="about-stat-number">15+</span>
                         <span class="about-stat-rule"></span>
                         <span class="about-stat-label">Projects</span>
                     </div>
@@ -220,7 +221,7 @@
                     </div>
                     <div class="about-stat">
                         <span class="about-stat-icon"><i class="fas fa-pencil-ruler"></i></span>
-                        <span class="about-stat-number">5+</span>
+                        <span class="about-stat-number">8+</span>
                         <span class="about-stat-rule"></span>
                         <span class="about-stat-label">UI/UX Design</span>
                     </div>
@@ -311,6 +312,7 @@
                         <button class="portfolio-filter-btn active" data-filter="all">All</button>
                         <button class="portfolio-filter-btn" data-filter="web-design">Web Design</button>
                         <button class="portfolio-filter-btn" data-filter="ui-ux">UI/UX</button>
+                        <button class="portfolio-filter-btn" data-filter="tailwind">Tailwind</button>
                         <button class="portfolio-filter-btn" data-filter="wordpress">WordPress</button>
                     </div>
                     <div class="portfolio-grid">
@@ -375,6 +377,26 @@
                             </div>
                         </div>
 
+                        <div class="portfolio-card" data-category="web-design" >
+                            <div class="portfolio-card-thumb">
+                                <img src="images/gamin-website.png" alt="">
+                                <div class="portfolio-card-overlay">
+                                    <a href="https://betadda777.com/" target="_blank" class="inner-link"  ><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="portfolio-card-tag">Web Design</span>
+                                <h3 class="portfolio-card-title">Online Gaming Platform</h3>
+                                <p class="portfolio-card-text">A gaming platform featuring casino games, sports betting, live sports, and interactive gaming categories in a responsive interface.</p>
+                                <div class="portfolio-card-stack">
+                                    <span>HTML5</span>
+                                    <span>SCSS</span>
+                                    <span>materialize CSS</span>
+                                    <span>jQuery</span>
+                                    <span>JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
                           
                         <div class="portfolio-card" data-category="web-design" data-gallery='["images/p2.png"'>
                             <div class="portfolio-card-thumb">
@@ -397,6 +419,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="portfolio-card" data-category="wordpress" data-gallery='["images/wordpress-1.png","images/wordpress-2.png","images/wordpress-3.png","images/wordpress-4.png","images/wordpress-5.png"]'>
                             <div class="portfolio-card-thumb">
                                 <img src="images/p1.png" alt="">
@@ -416,6 +439,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="portfolio-card" data-category="web-design" data-gallery='["images/s-1.png","images/s-2.png","images/s-3.png","images/s-4.png","images/s-5.png"]'>
                             <div class="portfolio-card-thumb">
                                 <img src="images/p4.png" alt="">
@@ -434,6 +458,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="portfolio-card" data-category="ui-ux" data-gallery='["images/habit-tacker-1.png","images/habit-tacker-2.png"]'>
                             <div class="portfolio-card-thumb">
                                 <img src="images/ht.png" alt="">
@@ -451,6 +476,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="portfolio-card" data-category="ui-ux" data-gallery='["images/petcare-1.png","images/petcare-2.png"]'>
                             <div class="portfolio-card-thumb">
                                 <img src="images/petcare.png" alt="">
@@ -468,6 +494,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="portfolio-card" data-category="ui-ux" data-gallery='["images/food-loop-2.png","images/food-loop-3.png","images/food-loop-4.png"]'>
                             <div class="portfolio-card-thumb">
                                 <img src="images/foodloop.png" alt="">
@@ -486,9 +513,115 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="portfolio-card" data-category="ui-ux" data-gallery='["images/post.png","images/post-1.png","images/post-2.png","images/post-3.png","images/post-4.png"]'>
+                            <div class="portfolio-card-thumb">
+                                <img src="images/post.png" alt="">
+                                <div class="portfolio-card-overlay">
+                                    <a href="#" class="portfolio-card-link" aria-label="View project"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="portfolio-card-tag">UI/UX Design</span>
+                                <h3 class="portfolio-card-title">Social Media & Digital Design</h3>
+                                <p class="portfolio-card-text">A collection of creative social media posts, promotional banners, website offers, and digital marketing designs.</p>
+                                <div class="portfolio-card-stack">
+                                    <span>Figma</span>
+                                    <span>UI Design</span>
+                                    <span>UX Design</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-card" data-category="ui-ux" data-gallery='["images/brochure.png","images/b-1.png","images/b-2.png","images/b-3.png","images/b-4.png","images/b-5.png","images/b-6.png"]'>
+                            <div class="portfolio-card-thumb">
+                                <img src="images/brochure.png" alt="">
+                                <div class="portfolio-card-overlay">
+                                    <a href="#" class="portfolio-card-link" aria-label="View project"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="portfolio-card-tag">UI/UX Design</span>
+                                <h3 class="portfolio-card-title">Brochure Design</h3>
+                                <p class="portfolio-card-text">Designed an attractive and informative brochure to showcase products, services, and brand identity with a clean, professional layout.</p>
+                                <div class="portfolio-card-stack">
+                                    <span>Figma</span>
+                                    <span>UI Design</span>
+                                    <span>UX Design</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-card" data-category="wordpress">
+                            <div class="portfolio-card-thumb">
+                                <img src="images/wordpress-project.png" alt="">
+                                
+                                <div class="portfolio-card-overlay">
+                                    
+                                    <a href="https://p708508.webspaceconfig.de/" target="_blank" class="inner-link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="portfolio-card-tag">Wordpress</span>
+                                <h3 class="portfolio-card-title">Psychotherapie Heilbronn</h3>
+                                <p class="portfolio-card-text">Designed a modern, responsive website for a psychotherapy and ADHD coaching practice, featuring therapy services, team profiles, service cards, and contact sections with a clean, user-friendly layout.</p>
+                                <div class="portfolio-card-stack">
+                                    <span>WordPress</span>
+                                    <span>Elementor</span>
+                                    <span>WooCommerce</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-card" data-category="tailwind">
+                            <div class="portfolio-card-thumb">
+                                <img src="images/schoolindia.png" alt="">
+                                
+                                <div class="portfolio-card-overlay">
+                                    
+                                    <a href="https://krutika160.github.io/schoolindia/" target="_blank" class="inner-link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="portfolio-card-tag">Tailwind</span>
+                                <h3 class="portfolio-card-title">School India</h3>
+                                <p class="portfolio-card-text">SchoolIndia is an educational portal offering school management, ERP solutions, online admissions, school search, and website development services for schools across India.</p>
+                                <div class="portfolio-card-stack">
+                                    <span>Tailwind CSS</span>
+                                    <span>HTML , CSS</span>
+                                    <span>Responsive Design</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-card" data-category="tailwind">
+                            <div class="portfolio-card-thumb">
+                                <img src="images/cric365.png" alt="">
+                                
+                                <div class="portfolio-card-overlay">
+                                    
+                                    <a href="https://cric.badaabet.com/" target="_blank" class="inner-link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="portfolio-card-tag">Tailwind</span>
+                                <h3 class="portfolio-card-title">Cric365 – Live Cricket Platform</h3>
+                                <p class="portfolio-card-text">Cric365 is a cricket-focused platform designed to provide users with cricket match updates, live scores, and betting-related features in one place.</p>
+                                <div class="portfolio-card-stack">
+                                    <span>Tailwind CSS</span>
+                                    <span>HTML , SCSS</span>
+                                    <span>Responsive Design</span>
+                                </div>
+                            </div>
+                        </div>
                         
                         
                     </div>
+
+                    <div class="portfolio-more">
+                        <button type="button" class="btn-primary portfolio-more-btn" id="portfolioMoreBtn">View More</button>
+                    </div>
+
                 </div>
                 
             </div>
@@ -592,7 +725,7 @@
                                 </li>
                             </ul>
                             <div class="contact-map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36539.54401475199!2d72.98848405525553!3d20.734255898756793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0ec4955555555%3A0x709e671a8bebb85!2sdigitalinovation!5e0!3m2!1sen!2sin!4v1729062746185!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                               <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3730.569498235274!2d73.023028!3d20.768235999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDQ2JzA1LjciTiA3M8KwMDEnMjIuOSJF!5e0!3m2!1sen!2sin!4v1791824604875!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                             </div>
                         </div>
                     </div>
@@ -701,10 +834,17 @@
         </div>
     </div>
 
+    <button type="button" class="scroll-top-btn" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
     <script src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/external.js"></script>
+    <script type="text/javascript" src="js/animations.js"></script>
+    
 </body>
 </html>

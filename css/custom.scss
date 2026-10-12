@@ -332,7 +332,7 @@ main{
                 }
             }
             .hero-title{
-                font-size: 52px;
+                font-size: 48px;
                 line-height: 1.1;
                 font-weight: 700;
                 margin: 0 0 20px;
@@ -1330,6 +1330,9 @@ main{
             &.is-hidden {
                 display: none;
             }
+            &.is-more-hidden {
+                display: none;
+            }
 
             &:hover {
                 transform: translateY(-6px);
@@ -1356,12 +1359,13 @@ main{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 200px;
-                background: linear-gradient(
-                    135deg,
-                    rgba(108, 77, 255, 0.18) 0%,
-                    rgba(167, 139, 250, 0.08) 100%
-                );
+                height: auto;
+                min-height: 200px;
+                // background: linear-gradient(
+                //     135deg,
+                //     rgba(108, 77, 255, 0.18) 0%,
+                //     rgba(167, 139, 250, 0.08) 100%
+                // );
                 overflow: hidden;
                 img{
                     width: 100%;
@@ -1451,8 +1455,76 @@ main{
             }
         }
     }
+
+    .portfolio-more {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        .portfolio-more-btn {
+            cursor: pointer;
+            border: 0;
+        }
+        .is-hidden {
+            display: none;
+        }
+    }
     
 }
+
+.an.an-in {
+    opacity: 1;
+    animation: anUp .8s cubic-bezier(.22, .8, .3, 1) backwards;
+    animation-delay: var(--an-d, 0s);
+}
+
+
+.scroll-top-btn {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: var(--main-text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px var(--third-color);
+    z-index: 9990;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: 0.3s ease;
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    &:hover {
+        background: var(--secondary-color);
+        transform: translateY(-4px);
+    }
+    svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+
+
+
+@media (max-width: 575px) {
+    .scroll-top-btn {
+        right: 16px;
+        bottom: 16px;
+        width: 44px;
+        height: 44px;
+    }
+}
+
 
 .gallery-lightbox {
     position: fixed;
